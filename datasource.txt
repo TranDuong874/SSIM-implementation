@@ -1,0 +1,30 @@
+SSIQ dataset:
+https://s2.smu.edu/~eclarson/csiq.html
+
+Algorithms comparison:
+https://www.scirp.org/journal/paperinformation?paperid=90911#:~:text=MSE%20is%20the%20most%20common,incorporated%20with%20mean%20squared%20error.
+
+SSIM:
+https://ece.uwaterloo.ca/~z70wang/publications/ssim.html?form=MG0AV3
+
+FSIM:
+https://www4.comp.polyu.edu.hk/~cslzhang/IQA/FSIM/FSIM.htm
+
+GMSD:
+https://www4.comp.polyu.edu.hk/~cslzhang/IQA/GMSD/GMSD.htm
+
+https://videoprocessing.ai/metrics/ways-of-cheating-on-popular-objective-metrics.html#:~:text=There%20are%20too%20many%20parameters,better%20performance%20compared%20to%20PSNR.
+
+https://ieee-dataport.org/open-access/oscd-onera-satellite-change-detection
+
+x-ray large
+https://www.kaggle.com/datasets/raddar/chest-xrays-indiana-university
+
+chest x-ray small
+https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia/data
+
+covid xray noisy
+https://data.mendeley.com/datasets/fjg5cbzffh/3
+
+Low dose CT
+https://www.kaggle.com/datasets/andrewmvd/ct-low-dose-reconstruction/data?select=Preprocessed_256x256
