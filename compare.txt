@@ -1,0 +1,25 @@
+1. FSIM - Feature Similarity Index
+- VIF, SSIM assume that the importance of all windows/patches/features are important.
+- FSIM try to fix this problem by analyzing importance of low-level features.
+- Important/discernable features coincide with those points, where Fourier waves at different frequencies have congruent phases that is at points of high phase congruency (PC).
+- This conclusion was drawn from studies in neurobiology using MRI scans.
+- PC is contrast invariant, but image contrast does affect HVS, so image gradient magnitude (GM) is computed as secondary feature to encode contrast information.
+- PC is used as a weighting function to derive a similarity score.
+- FSIM is designed for gray scale but its variant FSIM_C with chrominance information can use for colored images.
+
+2. GMSD - Gradient Magnitude Similarity Deviation
+- Aims for efficiency and effectiveness, unlike previous methods which can only achieve one. This method aims to make image quality assessment faster.
+- GMSD is much simpler, it is not modeling any features of the HVS, instead GMSD computer local quality map by comparing gradient magnitude maps of the reference and distorted image, and use standard deviation as the error pooling strategy to compute the final score.
+- Using gradient magnitude is not new, most commonly encountered type of distortions like noise corruption, blur and compression artifacts will lead to highly visible structural change that pop out in the gradient domain.
+- Most FR-IQA models were inspired by SSIM. They first compute similarity between gradients of ref and dst image, then compute some additional information like gradient orientation, luminance similarity and phase congruency similarity (FSIM). However this is not fast.
+- The author believes using only this formation can yield high quality prediction.
+- Pixel-wise similarity between the gradient magnitude map of references and distorted images is computed as the LQM of the distorted image.
+- Global variation of local quality degradation can reflect image quality, therefore the authors used standard deviation of gradient magnitude similarity induced LQM to predict the overall image quality score.
+- Use Prewitt filter to calculate gradient because it's the simplest among the 3x3 template gradient filters
+
+3. VIF - Visual Information Fidelity
+- Treat HVS as a communication channel and they predict the subjective image quality by computing how much the information within the perceived reference image is preserved in the distorted one.
+- It does so by comparing mutual information acquired between undistorted image and undistorted image and mutual information of reference image and distorted image.
+- The author generalized the experiment by using random field generated from NSS model like Gaussian Scale Mixture, which basically generate random images/pixels with statistic that follows how images of nature scenes work, like clouds are smooth so they have certain statistics.
+- Key idea is using Mutual information.
+- Rely on assumptions in HVS
